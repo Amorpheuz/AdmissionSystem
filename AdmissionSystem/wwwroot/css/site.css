@@ -5,6 +5,9 @@ body {
     padding-bottom: 20px;
 }
 
+p {
+    text-align: justify;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
