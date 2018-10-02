@@ -10,6 +10,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch wwwroot/scss -o wwwroot/css"
+    "scss": "node-sass --watch scss -o wwwroot/css"
   }
 }
