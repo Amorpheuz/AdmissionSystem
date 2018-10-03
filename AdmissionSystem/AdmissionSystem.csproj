@@ -23,6 +23,18 @@
     <Folder Include="Models\" />
     <Folder Include="Pages\Students\" />
     <Folder Include="PagesStudents\" />
+    <Folder Include="Pages\AcademicRecord\" />
+    <Folder Include="PagesAcademicRecord\" />
+    <Folder Include="Pages\AcademicYear\" />
+    <Folder Include="PagesAcademicYear\" />
+    <Folder Include="Pages\ApplicationList\" />
+    <Folder Include="PagesApplicationList\" />
+    <Folder Include="Pages\Documents\" />
+    <Folder Include="PagesDocuments\" />
+    <Folder Include="Pages\Fees\" />
+    <Folder Include="PagesFees\" />
+    <Folder Include="Pages\Programs\" />
+    <Folder Include="PagesPrograms\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Data\AdmissionDbContext.cs" />

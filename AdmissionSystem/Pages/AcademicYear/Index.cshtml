@@ -1,0 +1,54 @@
+@page
+@model AdmissionSystem.PagesAcademicYear.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AcademicYear[0].AcaYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcademicYear[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcademicYear[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcademicYear[0].IntakeCapacity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AcademicYear) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcaYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntakeCapacity)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AcademicYearID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AcademicYearID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AcademicYearID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
