@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\AcademicYear\Delete.cshtml" />
+    <Content Remove="Pages\AcademicYear\Details.cshtml" />
+    <Content Remove="Pages\AcademicYear\Edit.cshtml" />
+    <Content Remove="Pages\AcademicYear\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="scss\custom.scss" />
@@ -14,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.4" PrivateAssets="All" />
   </ItemGroup>
 
 <ItemGroup>
