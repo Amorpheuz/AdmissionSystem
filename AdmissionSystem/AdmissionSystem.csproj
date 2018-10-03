@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\AcademicYear\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="scss\custom.scss" />
   </ItemGroup>
 
@@ -25,7 +28,6 @@
     <Folder Include="PagesStudents\" />
     <Folder Include="Pages\AcademicRecord\" />
     <Folder Include="PagesAcademicRecord\" />
-    <Folder Include="Pages\AcademicYear\" />
     <Folder Include="PagesAcademicYear\" />
     <Folder Include="Pages\ApplicationList\" />
     <Folder Include="PagesApplicationList\" />
@@ -35,6 +37,7 @@
     <Folder Include="PagesFees\" />
     <Folder Include="Pages\Programs\" />
     <Folder Include="PagesPrograms\" />
+    <Folder Include="Pages\AcademicYear\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Data\AdmissionDbContext.cs" />

@@ -4,14 +4,16 @@ using AdmissionSystem.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AdmissionSystem.Migrations
 {
     [DbContext(typeof(AdmissionContext))]
-    partial class AdmissionContextModelSnapshot : ModelSnapshot
+    [Migration("20181003060539_migratetest4")]
+    partial class migratetest4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
