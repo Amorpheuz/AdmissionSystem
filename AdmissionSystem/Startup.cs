@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using AdmissionSystem.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AdmissionSystem.Models;
 
 namespace AdmissionSystem
 {
@@ -74,6 +75,9 @@ namespace AdmissionSystem
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<AdmissionContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AdmissionContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
