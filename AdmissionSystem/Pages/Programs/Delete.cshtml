@@ -1,5 +1,5 @@
 @page
-@model AdmissionSystem.PagesDocuments.DeleteModel
+@model AdmissionSystem.PagesPrograms.DeleteModel
 
 @{
     ViewData["Title"] = "Delete";
@@ -9,19 +9,19 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Documents</h4>
+    <h4>Programs</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Documents.DocumentPath)
+            @Html.DisplayNameFor(model => model.Programs.ProgramName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Documents.DocumentPath)
+            @Html.DisplayFor(model => model.Programs.ProgramName)
         </dd>
     </dl>
     
     <form method="post">
-        <input type="hidden" asp-for="Documents.DocumentsID" />
+        <input type="hidden" asp-for="Programs.ProgramsID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-page="./Index">Back to List</a>
     </form>

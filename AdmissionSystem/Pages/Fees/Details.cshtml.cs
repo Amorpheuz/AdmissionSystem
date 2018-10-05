@@ -27,7 +27,8 @@ namespace AdmissionSystem.PagesFees
                 return NotFound();
             }
 
-            Fees = await _context.Fees.FirstOrDefaultAsync(m => m.FeesID == id);
+            Fees = await _context.Fees
+                .Include(f => f.AcademicYear).FirstOrDefaultAsync(m => m.FeesID == id);
 
             if (Fees == null)
             {

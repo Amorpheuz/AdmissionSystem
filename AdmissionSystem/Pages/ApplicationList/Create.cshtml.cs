@@ -20,6 +20,8 @@ namespace AdmissionSystem.PagesApplicationList
 
         public IActionResult OnGet()
         {
+        ViewData["AcademicYearID"] = new SelectList(_context.AcademicYear, "AcademicYearID", "AcademicYearID");
+        ViewData["StudentID"] = new SelectList(_context.Student, "StudentID", "StudentID");
             return Page();
         }
 

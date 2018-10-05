@@ -7,8 +7,10 @@ namespace AdmissionSystem.Models
 {
     public class Programs
     {
+        
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public String ProgramsID { get; set; }
+        [Display(Name ="Program ID")]
+        public string ProgramsID { get; set; }
 
         [Required(ErrorMessage ="Please Specify Program Name")]
         [Display(Name ="Program Name")]

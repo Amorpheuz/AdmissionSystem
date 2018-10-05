@@ -26,6 +26,7 @@ namespace AdmissionSystem.Models
         [Required(ErrorMessage ="Please Specify intake capacity for specified program")]
         [Display(Name ="Intake Capacity for the Program")]
         public int IntakeCapacity { get; set; }
+        public string ProgramsID { get; set; }
 
         public Programs Programs { get; set; }
 

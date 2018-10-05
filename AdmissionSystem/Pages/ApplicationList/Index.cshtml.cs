@@ -22,7 +22,9 @@ namespace AdmissionSystem.PagesApplicationList
 
         public async Task OnGetAsync()
         {
-            ApplicationList = await _context.ApplicationList.ToListAsync();
+            ApplicationList = await _context.ApplicationList
+                .Include(a => a.AcademicYear)
+                .Include(a => a.Student).ToListAsync();
         }
     }
 }

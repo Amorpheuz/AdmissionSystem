@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AdmissionSystem.Models;
 
-namespace AdmissionSystem.PagesStudents
+namespace AdmissionSystem.PagesStudent
 {
     public class IndexModel : PageModel
     {

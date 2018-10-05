@@ -22,7 +22,8 @@ namespace AdmissionSystem.PagesAcademicYear
 
         public async Task OnGetAsync()
         {
-            AcademicYear = await _context.AcademicYear.ToListAsync();
+            AcademicYear = await _context.AcademicYear
+                .Include(a => a.Programs).ToListAsync();
         }
     }
 }

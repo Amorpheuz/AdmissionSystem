@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using AdmissionSystem.Models;
 
-namespace AdmissionSystem.PagesStudents
+namespace AdmissionSystem.PagesStudent
 {
     public class CreateModel : PageModel
     {

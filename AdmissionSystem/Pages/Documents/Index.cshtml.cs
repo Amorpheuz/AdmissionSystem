@@ -22,7 +22,8 @@ namespace AdmissionSystem.PagesDocuments
 
         public async Task OnGetAsync()
         {
-            Documents = await _context.Documents.ToListAsync();
+            Documents = await _context.Documents
+                .Include(d => d.Student).ToListAsync();
         }
     }
 }

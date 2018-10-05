@@ -20,6 +20,7 @@ namespace AdmissionSystem.PagesDocuments
 
         public IActionResult OnGet()
         {
+        ViewData["StudentID"] = new SelectList(_context.Student, "StudentID", "StudentID");
             return Page();
         }
 

@@ -22,7 +22,8 @@ namespace AdmissionSystem.PagesFees
 
         public async Task OnGetAsync()
         {
-            Fees = await _context.Fees.ToListAsync();
+            Fees = await _context.Fees
+                .Include(f => f.AcademicYear).ToListAsync();
         }
     }
 }

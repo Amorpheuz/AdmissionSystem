@@ -16,6 +16,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Documents[0].DocumentPath)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documents[0].Student)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -24,6 +27,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.DocumentPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.StudentID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.DocumentsID">Edit</a> |

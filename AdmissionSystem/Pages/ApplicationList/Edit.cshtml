@@ -30,6 +30,16 @@
                 <span asp-validation-for="ApplicationList.PrioAreaOfResearch" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ApplicationList.StudentID" class="control-label"></label>
+                <select asp-for="ApplicationList.StudentID" class="form-control" asp-items="ViewBag.StudentID"></select>
+                <span asp-validation-for="ApplicationList.StudentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationList.AcademicYearID" class="control-label"></label>
+                <select asp-for="ApplicationList.AcademicYearID" class="form-control" asp-items="ViewBag.AcademicYearID"></select>
+                <span asp-validation-for="ApplicationList.AcademicYearID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>

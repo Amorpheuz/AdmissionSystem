@@ -22,7 +22,8 @@ namespace AdmissionSystem.PagesAcademicRecord
 
         public async Task OnGetAsync()
         {
-            AcademicRecord = await _context.AcademicRecord.ToListAsync();
+            AcademicRecord = await _context.AcademicRecord
+                .Include(a => a.Student).ToListAsync();
         }
     }
 }

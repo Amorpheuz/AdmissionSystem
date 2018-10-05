@@ -19,6 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Fees[0].FeesType)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fees[0].AcademicYear)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -30,6 +33,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FeesType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcademicYear.AcademicYearID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.FeesID">Edit</a> |

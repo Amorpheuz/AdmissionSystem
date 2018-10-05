@@ -5,6 +5,7 @@ namespace AdmissionSystem.Models
     {
         public string DocumentsID { get; set; }
         public string DocumentPath { get; set; }
+        public int StudentID { get; set; }
 
         public Student Student { get; set; }
     }

@@ -28,7 +28,8 @@ namespace AdmissionSystem.PagesAcademicRecord
                 return NotFound();
             }
 
-            AcademicRecord = await _context.AcademicRecord.FirstOrDefaultAsync(m => m.AcademicRecordID == id);
+            AcademicRecord = await _context.AcademicRecord
+                .Include(a => a.Student).FirstOrDefaultAsync(m => m.AcademicRecordID == id);
 
             if (AcademicRecord == null)
             {

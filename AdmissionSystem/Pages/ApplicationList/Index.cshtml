@@ -22,6 +22,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.ApplicationList[0].PrioAreaOfResearch)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationList[0].Student)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationList[0].AcademicYear)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -36,6 +42,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PrioAreaOfResearch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.StudentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcademicYear.AcademicYearID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ApplicationListID">Edit</a> |

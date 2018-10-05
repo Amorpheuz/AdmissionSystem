@@ -20,6 +20,7 @@ namespace AdmissionSystem.PagesFees
 
         public IActionResult OnGet()
         {
+        ViewData["AcademicYearID"] = new SelectList(_context.AcademicYear, "AcademicYearID", "AcademicYearID");
             return Page();
         }
 

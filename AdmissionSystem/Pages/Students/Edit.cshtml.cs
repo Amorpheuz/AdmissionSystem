@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AdmissionSystem.Models;
 
-namespace AdmissionSystem.PagesStudents
+namespace AdmissionSystem.PagesStudent
 {
     public class EditModel : PageModel
     {

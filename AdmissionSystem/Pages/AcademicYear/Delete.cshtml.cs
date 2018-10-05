@@ -28,7 +28,8 @@ namespace AdmissionSystem.PagesAcademicYear
                 return NotFound();
             }
 
-            AcademicYear = await _context.AcademicYear.FirstOrDefaultAsync(m => m.AcademicYearID == id);
+            AcademicYear = await _context.AcademicYear
+                .Include(a => a.Programs).FirstOrDefaultAsync(m => m.AcademicYearID == id);
 
             if (AcademicYear == null)
             {

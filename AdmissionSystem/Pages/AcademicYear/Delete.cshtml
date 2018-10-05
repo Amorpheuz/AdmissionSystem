@@ -36,6 +36,12 @@
         <dd>
             @Html.DisplayFor(model => model.AcademicYear.IntakeCapacity)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AcademicYear.Programs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AcademicYear.Programs.ProgramsID)
+        </dd>
     </dl>
     
     <form method="post">

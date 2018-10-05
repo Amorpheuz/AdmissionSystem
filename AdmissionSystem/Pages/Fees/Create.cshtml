@@ -24,6 +24,10 @@
                 <span asp-validation-for="Fees.FeesType" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Fees.AcademicYearID" class="control-label"></label>
+                <select asp-for="Fees.AcademicYearID" class ="form-control" asp-items="ViewBag.AcademicYearID"></select>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>

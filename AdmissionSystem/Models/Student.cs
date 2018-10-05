@@ -17,7 +17,7 @@ namespace AdmissionSystem.Models
  
     public class Student
     {
-
+        [Display(Name ="Student ID")]
         public int StudentID { get; set; }
 
         [Required(ErrorMessage = "Please Specify Your Name"), StringLength(60)]

@@ -14,6 +14,8 @@ namespace AdmissionSystem.Models
         [Required]
         public string Status { get; set; }
         public string PrioAreaOfResearch { get; set; }
+        public int StudentID { get; set; }
+        public int AcademicYearID { get; set; }
 
         public Student Student { get; set; }
         public AcademicYear AcademicYear { get; set; }

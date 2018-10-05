@@ -47,6 +47,7 @@ namespace AdmissionSystem.Models
         [Display(Name ="Grade/Marks Obtained")]
         [Required(ErrorMessage = "Grade/Marks Obtained is required")]
         public string MarksObtained { get; set; }
+        public int StudentID { get; set; }
 
         public Student Student { get; set; }
     }

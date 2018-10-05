@@ -27,7 +27,8 @@ namespace AdmissionSystem.PagesDocuments
                 return NotFound();
             }
 
-            Documents = await _context.Documents.FirstOrDefaultAsync(m => m.DocumentsID == id);
+            Documents = await _context.Documents
+                .Include(d => d.Student).FirstOrDefaultAsync(m => m.DocumentsID == id);
 
             if (Documents == null)
             {
