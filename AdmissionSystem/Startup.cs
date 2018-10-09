@@ -36,7 +36,7 @@ namespace AdmissionSystem
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+                                                        options.UseNpgsql(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -77,7 +77,7 @@ namespace AdmissionSystem
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<AdmissionContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AdmissionContext")));
+                                                    options.UseNpgsql(Configuration.GetConnectionString("AdmissionContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
