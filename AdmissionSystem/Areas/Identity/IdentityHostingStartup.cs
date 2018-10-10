@@ -16,7 +16,7 @@ namespace AdmissionSystem.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<AdmissionSystemIdentityDbContext>(options =>
-                                                                        options.UseSqlServer(
+                                                                        options.UseNpgsql(
                         context.Configuration.GetConnectionString("AdmissionSystemIdentityDbContextConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>()

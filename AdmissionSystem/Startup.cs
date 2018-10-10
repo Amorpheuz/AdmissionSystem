@@ -36,12 +36,13 @@ namespace AdmissionSystem
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                                                        options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
-      
+                                                        options.UseNpgsql(
+                    Configuration.GetConnectionString("AdmissionContext")));
+            // services.AddDefaultIdentity<IdentityUser>()
+            //   .AddEntityFrameworkStores<ApplicationDbContext>();
+          //  services.AddDbContext<AdmissionContext>(options =>
+            //                                          options.UseNpgsql(
+              //    Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
